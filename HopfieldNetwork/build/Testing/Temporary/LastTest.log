@@ -1,0 +1,89 @@
+Start testing: May 19 22:26 CEST
+----------------------------------------------------------
+1/4 Testing: Pattern.t
+1/4 Test: Pattern.t
+Command: "/home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build/Release/Pattern.t"
+Directory: /home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build
+"Pattern.t" start time: May 19 22:26 CEST
+Output:
+----------------------------------------------------------
+Failed to load image "nullFile.png". Reason: can't fopen
+Failed to load image "nullFile.png". Reason: can't fopen
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  2 |  2 passed | 0 failed | 0 skipped
+[doctest] assertions: 33 | 33 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.71 sec
+----------------------------------------------------------
+Test Passed.
+"Pattern.t" end time: May 19 22:26 CEST
+"Pattern.t" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: Matrix.t
+2/4 Test: Matrix.t
+Command: "/home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build/Release/Matrix.t"
+Directory: /home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build
+"Matrix.t" start time: May 19 22:26 CEST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  9 |  9 passed | 0 failed | 0 skipped
+[doctest] assertions: 62 | 62 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix.t" end time: May 19 22:26 CEST
+"Matrix.t" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: Classic.t
+3/4 Test: Classic.t
+Command: "/home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build/Release/Classic.t"
+Directory: /home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build
+"Classic.t" start time: May 19 22:26 CEST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+####===============================================================================
+[doctest] test cases:   5 |   5 passed | 0 failed | 0 skipped
+[doctest] assertions: 155 | 155 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"Classic.t" end time: May 19 22:26 CEST
+"Classic.t" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: Modern.t
+4/4 Test: Modern.t
+Command: "/home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build/Release/Modern.t"
+Directory: /home/alessio-anceschi/Documents/HopfieldNeuralNetwork/hopfield/HopfieldNetwork/build
+"Modern.t" start time: May 19 22:26 CEST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.4.11"
+[doctest] run with "--help" for options
+####===============================================================================
+[doctest] test cases: 6 | 6 passed | 0 failed | 0 skipped
+[doctest] assertions: 9 | 9 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Modern.t" end time: May 19 22:26 CEST
+"Modern.t" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 19 22:26 CEST

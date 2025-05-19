@@ -1,0 +1,6 @@
+ImagePattern.t 69 0.00594319
+Matrix.t 100 0.000103477
+Classic.t 59 0.000764037
+Modern.t 33 0.000178451
+Pattern.t 19 0.0372667
+---
