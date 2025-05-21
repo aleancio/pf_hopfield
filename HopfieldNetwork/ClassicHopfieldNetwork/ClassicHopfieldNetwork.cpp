@@ -7,8 +7,7 @@ namespace abc {
 void ClassicHopfieldNetwork::checkPatternDimension(
     const std::vector<int>& pattern) const {
   if (weightMatrix_.size() !=
-      pattern.size()) {  // l'exception la sollevo anche in setElememt ma qui lo
-                         // faccio a priori, cosi da evitare casini
+      pattern.size()) {  // l'exception la sollevo anche in setElememt 
     throw std::runtime_error(
         "matrix and pattern sizes do not match!");  // necessario per il
                                                     // caricamento da file

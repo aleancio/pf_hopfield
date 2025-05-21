@@ -25,7 +25,7 @@ class Matrix {
   Matrix() {}
   Matrix(std::size_t rows, std::size_t cols, T default_val) {
     std::vector<T> row(cols, default_val);
-    for (unsigned int col = 0; col < rows; ++col) {
+    for (unsigned int row = 0; col < rows; ++row) {
       matrix_.push_back(row);
     }
   }

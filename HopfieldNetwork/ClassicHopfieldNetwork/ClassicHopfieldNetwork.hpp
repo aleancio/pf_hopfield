@@ -9,7 +9,7 @@ class ClassicHopfieldNetwork {
   Matrix<double> weightMatrix_;
   std::vector<int> originalPattern_;
 
-  void checkPatternDimension(const std::vector<int>& pattern) const;
+  void checkPatternDimension(const std::vector<int>& pattern) const; //class invariant
   double energyPerElement(size_t i, const std::vector<int>& pattern) const;
 
  public:
