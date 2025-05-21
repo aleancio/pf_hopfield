@@ -17,18 +17,18 @@ TEST_CASE("Testing Constructors") {
                          std::runtime_error);
   };
   SUBCASE("Constructors working - setting only image") {
-    abc::HopfieldImagePattern pattern{"TestImages/orecchino.png"};
+    abc::HopfieldImagePattern pattern("../HopfieldImagePattern/images/orecchino.png");
     CHECK(pattern.get_inImage().getSize().x >= 0);
   };
   SUBCASE("Constructors working - setting image and dimension") {
-    abc::HopfieldImagePattern pattern{"TestImages/orecchino.png", 20};
+    abc::HopfieldImagePattern pattern{"../HopfieldImagePattern/images/orecchino.png", 20};
     REQUIRE(pattern.get_inImage().getSize().x >= 0);
     CHECK(pattern.getImageDimension() == 20);
   };
 }
 TEST_CASE("Testing HopfieldImagePattern functions") {
   abc::HopfieldImagePattern pattern(
-      "TestImages/orecchino.png",
+      "../HopfieldImagePattern/images/orecchino.png",
       2);  // setting dimension to 2 so no alghorithm will change that ratio = 1
 
   sf::Image testImage;

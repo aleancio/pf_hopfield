@@ -42,13 +42,11 @@ find_package(SFML 2.6 COMPONENTS graphics REQUIRED)
 #Classic
 add_executable(ClassicLearn ClassicHopfieldNetwork/learn.cpp ClassicHopfieldNetwork/ClassicHopfieldNetwork.cpp HopfieldImagePattern/HopfieldImagePattern.cpp)
 target_link_libraries(ClassicLearn PRIVATE sfml-graphics sfml-window sfml-system)
-# nel caso si usi SFML. analogamente per eventuali altre librerie
+
 
 add_executable(ClassicRecog ClassicHopfieldNetwork/restorePattern.cpp ClassicHopfieldNetwork/ClassicHopfieldNetwork.cpp HopfieldImagePattern/HopfieldImagePattern.cpp)
 target_link_libraries(ClassicRecog PRIVATE sfml-graphics sfml-window sfml-system)
 
-
-# aggiungere eventuali altri eseguibili
 
 
 #Modern
@@ -68,21 +66,7 @@ if (BUILD_TESTING)
   target_link_libraries(Pattern.t PRIVATE sfml-graphics sfml-window sfml-system)
 
 
-  add_custom_command(TARGET Pattern.t POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    ${CMAKE_SOURCE_DIR}/ClassicHopfieldNetwork/images/orecchino.png
-    $<TARGET_FILE_DIR:Pattern.t>/../TestImages/orecchino.png
-)
-add_custom_command(TARGET ClassicRecog POST_BUILD
-  COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    ${CMAKE_SOURCE_DIR}/JAi_____.TTF
-    $<TARGET_FILE_DIR:ClassicRecog>/JAi_____.TTF
-)
-
-
-
   add_executable(Matrix.t Matrix/Matrix.test.cpp)
-
   add_executable(Classic.t ClassicHopfieldNetwork/ClassicHopfieldNetwork.cpp ClassicHopfieldNetwork/ClassicHopfieldNetwork.test.cpp)
   add_executable(Modern.t ModernHopfieldNetwork/ModernHopfieldNetwork.cpp ModernHopfieldNetwork/ModernHopfieldNetwork.test.cpp)
 
