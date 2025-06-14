@@ -44,8 +44,8 @@ TEST_CASE("Testing HopfieldImagePattern functions") {
 
   std::vector<int> expectedPattern = {-1, 1, -1, 1};
 
-  SUBCASE("Testing adapting algorithm - with smfl") {
-    pattern.adaptImage_withSMFL();
+  SUBCASE("Testing adapting algorithm - with SFML") {
+    pattern.adaptImage_withSFML();
     CHECK(pattern.getPatternDimension() == 4);
     std::vector<int> createdPattern = pattern.getPattern();
     CHECK(createdPattern ==
@@ -116,13 +116,13 @@ TEST_CASE("Testing HopfieldImagePattern functions") {
 
   // corrupting pattern
   SUBCASE("Testing corrupt - corrupting 0 pixel does nothing") {
-    pattern.adaptImage_withSMFL();
+    pattern.adaptImage_withSFML();
     auto original = pattern.getPattern();
     pattern.corrupt(0);
     CHECK(pattern.getPattern() == original);
   }
   SUBCASE("Testing corrupt - corrupt n pixels modifies exactly n values") {
-    pattern.adaptImage_withSMFL();
+    pattern.adaptImage_withSFML();
     auto original = pattern.getPattern_for_testing();
     pattern.corrupt(3);
     auto corrupted = pattern.getPattern_for_testing();
@@ -139,7 +139,7 @@ TEST_CASE("Testing HopfieldImagePattern functions") {
     CHECK(diffCount == 3);
   }
   SUBCASE("Testing corrupt - corrupt more pixels than allowed throws") {
-    pattern.adaptImage_withSMFL();
+    pattern.adaptImage_withSFML();
     CHECK_THROWS_WITH_AS(
         pattern.corrupt(pattern.getPatternDimension() + 1),
         "Cannot corrupt more pixels than the pattern contains.",
@@ -148,12 +148,12 @@ TEST_CASE("Testing HopfieldImagePattern functions") {
 
   // pattern elaborator
   SUBCASE("Testing patterElaborator - passing the right pattern ") {
-    pattern.adaptImage_withSMFL();
+    pattern.adaptImage_withSFML();
     const std::vector<int>& ref = pattern.elaboratePattern();
     CHECK(ref == expectedPattern);
   }
   SUBCASE("Testing patterElaborator - modifying the pattern ") {
-    pattern.adaptImage_withSMFL();
+    pattern.adaptImage_withSFML();
     std::vector<int>& ref = pattern.elaboratePattern();
     ref[2] = -1;
     CHECK(pattern.getPattern()[2] == -1);

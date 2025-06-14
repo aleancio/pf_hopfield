@@ -50,7 +50,7 @@ class HopfieldImagePattern {
   void corrupt(long unsigned int nPixel);
 
   //these methods adapt inImage to the size given and they use createBinaryPattern() to load pattern_
-  sf::Image adaptImage_withSMFL(); 
+  sf::Image adaptImage_withSFML(); 
   void adaptImage_withBilinearInterpolation();
 
 

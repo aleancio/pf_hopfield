@@ -131,7 +131,7 @@ void HopfieldImagePattern::createBinaryPattern(const sf::Image& img) {
 
 // methods to shrink images (questi non hanno throws perchè sono già ceckatti
 // prima in setInImage)
-sf::Image HopfieldImagePattern::adaptImage_withSMFL() {
+sf::Image HopfieldImagePattern::adaptImage_withSFML() {
   sf::Texture o_Texture;
   o_Texture.loadFromImage(
     inImage_); // per essere caricata l'immagine passa da setInImage, dove
