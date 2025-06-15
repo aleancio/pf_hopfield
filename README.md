@@ -18,10 +18,10 @@ Both versions aim to **store, corrupt, recognize, and then correct** image patte
 
 The project is organized into four subfolders within the main `HopfieldNetwork` directory:
 
-- HopfieldImagePattern: handles image reading, adaptation, and corruption  
-- Matrix: contains functions for manage the matrix  
-- ClassicHopfieldNetwork: contains the classic network implementation  
-- ModernHopfieldNetwork: contains the modern network implementation
+- `HopfieldImagePattern`: handles image reading, adaptation, and corruption  
+- `Matrix`: contains functions for manage the matrix  
+- `ClassicHopfieldNetwork`: contains the classic network implementation  
+- `ModernHopfieldNetwork`: contains the modern network implementation
 
 
 ## 🛠️ Compilation
@@ -31,19 +31,35 @@ Before compiling, make sure you have SFML installed (used for graphical output)
 
 ## 🎬 Demo
 
-We included **example demo applications** to showcase the learning and recognition process of the Hopfield Neural Network.
+The project includes **example demo applications** to showcase both the learning and recognition phases of the Hopfield Neural Network, in both its classic and modern versions.
 
-### 📁 Demo folders
+### 📁 Demo files
 
-In the main project directory (`HopfieldNetwork`), you will find:
+In the main project directory (`HopfieldNetwork`), you will find the following key source files:
 
-- `demo_inputs/`: contains pre-processed or raw input images for both classic and modern demos  
-- `demo_outputs/`: created automatically by the programs, showing the recovery process step-by-step  
-- `demo_scripts/` (if present): optional helper scripts for launching full demo sequences  
+- `ClassicLearn.cpp`: Example program to train the classic Hopfield network.
+- `ClassicRecog.cpp`: Program that recovers a corrupted pattern using the classic method.
+- `ModernLearn.cpp`: Training program for the modern Hopfield network.
+- `ModernRecog.cpp`: Program that applies simulated annealing to recover patterns using the modern method.
 
-### 🧪 Run Classic Demo
+### ⚙️ Requirements
 
-To run the classic Hopfield network demo:
+Make sure you have **CMake** installed. If not, please install it
+
+Be sure to be in HopfieldNetwork
+
+Then execute:
+`cmake -S . -B build -G "Ninja Multi-Config"
+cmake --build build --config Debug
+cmake --build build --config Debug --target test
+cmake --build build --config Release
+cmake --build build --config Release --target test`
+
+And now:
+-`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo 
+-`./build/Debug(Relaese)/ClassicRecog`: to run ClassicRecog demo
+-`./build/Debug(Relaese)/ModernLearn`: to run ModernLearn demo
+-`./build/Debug(Relaese)/ModernRecog`: to run ModernRecog demo
 
 
 
