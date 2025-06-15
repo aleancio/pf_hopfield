@@ -44,22 +44,22 @@ In the main project directory (`HopfieldNetwork`), you will find the following k
 
 ### ⚙️ Requirements
 
-Make sure you have **CMake** installed. If not, please install it
+Make sure you have **CMake** installed. If not, please install it.
 
-Be sure to be in HopfieldNetwork
+Be sure to be in HopfieldNetwork.
 
 Then execute:
-`cmake -S . -B build -G "Ninja Multi-Config"
-cmake --build build --config Debug
-cmake --build build --config Debug --target test
-cmake --build build --config Release
-cmake --build build --config Release --target test`
+`cmake -S . -B build -G "Ninja Multi-Config" \n
+cmake --build build --config Debug \n
+cmake --build build --config Debug --target test \n
+cmake --build build --config Release \n
+cmake --build build --config Release --target test` 
 
 And now:
--`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo 
--`./build/Debug(Relaese)/ClassicRecog`: to run ClassicRecog demo
--`./build/Debug(Relaese)/ModernLearn`: to run ModernLearn demo
--`./build/Debug(Relaese)/ModernRecog`: to run ModernRecog demo
+-`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo. 
+-`./build/Debug(Relaese)/ClassicRecog`: to run ClassicRecog demo.
+-`./build/Debug(Relaese)/ModernLearn`: to run ModernLearn demo.
+-`./build/Debug(Relaese)/ModernRecog`: to run ModernRecog demo.
 
 
 
