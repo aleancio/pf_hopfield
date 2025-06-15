@@ -49,10 +49,10 @@ Make sure you have **CMake** installed. If not, please install it.
 Be sure to be in HopfieldNetwork.
 
 Then execute:
-`cmake -S . -B build -G "Ninja Multi-Config" \n
-cmake --build build --config Debug \n
-cmake --build build --config Debug --target test \n
-cmake --build build --config Release \n
+`cmake -S . -B build -G "Ninja Multi-Config"  
+cmake --build build --config Debug  
+cmake --build build --config Debug --target test  
+cmake --build build --config Release  
 cmake --build build --config Release --target test` 
 
 And now:
