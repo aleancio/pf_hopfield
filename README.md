@@ -49,11 +49,13 @@ Make sure you have **CMake** installed. If not, please install it.
 Be sure to be in HopfieldNetwork.
 
 Then execute:
-`cmake -S . -B build -G "Ninja Multi-Config"  
-cmake --build build --config Debug  
-cmake --build build --config Debug --target test  
-cmake --build build --config Release  
-cmake --build build --config Release --target test` 
+```bash
+cmake -S . -B build -G "Ninja Multi-Config"
+cmake --build build --config Debug
+cmake --build build --config Debug --target test
+cmake --build build --config Release
+cmake --build build --config Release --target test
+```
 
 And now:
 -`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo. 
