@@ -123,8 +123,8 @@ double ModernHopfieldNetwork::CoolingSchedule(int iter) const {
   }
 
   // annealing functions
-  temp = static_cast<float>(temp_0_ * std::pow(0.8, iter));
-  // temp = static_cast<float>(temp_0_ * (1 / std::log(2 + iter)));
+  // temp = static_cast<float>(temp_0_ * std::pow(0.8, iter));
+  temp = static_cast<float>(temp_0_ * (1 / std::log(2 + iter)));
   // temp = static_cast<float>(temp_0 - 0.9*iter);
 
   if (temp < 0.01) {

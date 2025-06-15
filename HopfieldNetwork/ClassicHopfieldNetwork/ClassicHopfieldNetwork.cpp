@@ -1,13 +1,13 @@
 #include "ClassicHopfieldNetwork.hpp"
 
-#include <random>
 #include <iostream>
+#include <random>
 
 namespace abc {
 void ClassicHopfieldNetwork::checkPatternDimension(
     const std::vector<int>& pattern) const {
   if (weightMatrix_.size() !=
-      pattern.size()) {  // l'exception la sollevo anche in setElememt 
+      pattern.size()) {  // l'exception la sollevo anche in setElememt
     throw std::runtime_error(
         "matrix and pattern sizes do not match!");  // necessario per il
                                                     // caricamento da file
@@ -95,7 +95,7 @@ bool ClassicHopfieldNetwork::probability(double dE, double temp) const {
   std::mt19937 gen(rd());
   std::uniform_real_distribution<> distrib(0.0, 1.0);
 
-  long double prob = std::exp((-std::abs(dE)/ (temp)));
+  long double prob = std::exp((-std::abs(dE) / (temp)));
   double r = distrib(gen);
 
   return r < prob;

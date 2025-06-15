@@ -29,7 +29,7 @@ class Matrix {
       matrix_.push_back(values);
     }
   }
- 
+
   // setter
   void setElement(std::size_t i, std::size_t j, T value) {
     checkEmptiness();
@@ -141,7 +141,7 @@ class Matrix {
 
 namespace fs = std::filesystem;
 
-//not tested
+// not tested
 inline const std::vector<std::string> setDirectory(const std::string& input) {
   std::vector<std::string> images_path;
   if (!fs::exists(input) || !fs::is_directory(input)) {

@@ -4,22 +4,22 @@
 
 #include "../doctest.h"
 
-
 TEST_CASE("Costructor") {
   std::size_t dim = 10;
-  abc::ClassicHopfieldNetwork net(dim); 
+  abc::ClassicHopfieldNetwork net(dim);
 
   CHECK(net.getMatrix().getMatrix()[0].size() == dim);
   CHECK(net.getMatrix().size() == dim);
 
   for (std::size_t i = 0; i < dim; ++i) {
-      for (std::size_t j = 0; j < dim; ++j) {
-          CHECK(net.getMatrix().getElement(i, j) == doctest::Approx(0.0));
-      }
+    for (std::size_t j = 0; j < dim; ++j) {
+      CHECK(net.getMatrix().getElement(i, j) == doctest::Approx(0.0));
+    }
   }
-  SUBCASE("Testing Throw")
-  {
-    CHECK_THROWS_WITH_AS(abc::ClassicHopfieldNetwork(0), "Invalid pattern dimension, it must be greater than 0" ,std::runtime_error);
+  SUBCASE("Testing Throw") {
+    CHECK_THROWS_WITH_AS(abc::ClassicHopfieldNetwork(0),
+                         "Invalid pattern dimension, it must be greater than 0",
+                         std::runtime_error);
   }
 }
 TEST_CASE("Testing learning pattern") {
@@ -89,14 +89,14 @@ TEST_CASE("Testing restore pattern") {
   net.learnPattern(testPattern1);
   net.learnPattern(testPattern2);
 
-  SUBCASE("Testing restore pattern - corrupted pattern one iteration and end_condition") {
-
+  SUBCASE(
+      "Testing restore pattern - corrupted pattern one iteration and "
+      "end_condition") {
     net.restorePattern(corrupted_pat);
     CHECK(corrupted_pat == testPattern1);
     CHECK(net.restorePattern(corrupted_pat));
   }
-  SUBCASE(
-      "Testing restore pattern - corrupted pattern with wrong dimension") {
+  SUBCASE("Testing restore pattern - corrupted pattern with wrong dimension") {
     std::vector<int> corrupted_pat_wd = {1, -1, 1};
 
     CHECK_THROWS_WITH_AS(net.restorePattern(corrupted_pat_wd),
@@ -120,9 +120,9 @@ TEST_CASE("Testing Energy Functions") {
   CHECK(net.getMatrix().getElement(0, 1) == 1);
 
   std::vector<int> pattern = {1, -1, 1};
-  //calcolato a mano
-  
-  CHECK(doctest::Approx(net.totalEnergy(pattern)) == 3.0); 
+  // calcolato a mano
+
+  CHECK(doctest::Approx(net.totalEnergy(pattern)) == 3.0);
 }
 TEST_CASE("Testing Annealing") {
   SUBCASE("CoolingSchedule behaves correctly") {
