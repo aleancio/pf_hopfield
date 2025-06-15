@@ -58,12 +58,12 @@ cmake --build build --config Release --target test
 ```
 
 And now:
-```bash
--`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo. 
--`./build/Debug(Relaese)/ClassicRecog`: to run ClassicRecog demo.
--`./build/Debug(Relaese)/ModernLearn`: to run ModernLearn demo.
--`./build/Debug(Relaese)/ModernRecog`: to run ModernRecog demo.
-```
+
+-`./build/Debug(Relaese)/ClassicLearn`: to run ClassicLearn demo.   
+-`./build/Debug(Relaese)/ClassicRecog`: to run ClassicRecog demo.  
+-`./build/Debug(Relaese)/ModernLearn`: to run ModernLearn demo.  
+-`./build/Debug(Relaese)/ModernRecog`: to run ModernRecog demo.  
+
 
 
 
