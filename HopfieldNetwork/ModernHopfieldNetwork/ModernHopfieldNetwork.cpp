@@ -153,7 +153,7 @@ bool ModernHopfieldNetwork::restorePattern_withAnnealing(
     int candidate = (E_plus < E_minus) ? 1 : -1;
 
     if (candidate != state[l]) {
-      state[l] = candidate;
+      //state[l] = candidate;
       double E0 = candidate > 0 ? E_plus : E_minus;
       double dE = energyPerState(state, n) - E0;
 
